@@ -1,0 +1,204 @@
+---
+layout: project
+title: Sustainable Development Goals
+excerpt: "Project to World Bank Data for UN Sustainable Development Goals"
+header:
+  image: /assets/images/field.jpg
+  teaser: /assets/images/field-th.jpg
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>SDGMap</title>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+		<script src="http://d3js.org/d3-geo-projection.v1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/assets/SDG/css/style.css">
+		<style type="text/css"></style>
+	</head>
+	<body>
+
+		<div id="selectors"></div>
+		<div class="tooltip"></div>
+
+		<div class="information" id="information">
+			<!-- First Parallax Section -->
+			<div class="jumbotron paral paralsec">
+				<h1 class="display-3">Gender Disparity - World Bank Data</h1>
+				<h2 class="display-3">A Visualization of UN Sustainable Development Goals</h2>
+				<p class="lead">This site shows selected World Bank Indicators representing UN member Sustainable Development Goals. These goals offer a shared blueprint adopted by nations to preserve peace and prosperity for people and the planet. We focus on goals related to Gender Disparity, showing World Bank Indicators by Geography and over time.</p>
+				<p class="lead">The site is designed for UN staff, non-government organizations, charities and government bodies interested in countries' responsibilities to citizens; specifically gender disparity</p>
+				<p class="lead">
+					<button type="button" class="btn1 btn-warning btn-lg btn-sm" onclick="show('mapDashboard');">Show Map</button>
+					<button type="button" class="btn1 btn-warning btn-lg btn-sm" onclick="show('GDIDashboard');">Show GDI Chart</button>
+					<button type="button" class="btn1 btn-warning btn-lg btn-sm" onclick="show('lineDashboard');">Show Line Chart</button>
+					</p>
+			</div>
+
+			<!-- Third Parallax Section -->
+			<div class="jumbotron paral paralsec1">
+				<h1 class="display-3">Gender Disparity Index</h1>
+				<p class="lead"> To find disparities we use a custom Gender Disparity Index
+				<h2 class="display-3">Calculation</h2>
+				<p class="lead">The World Bank data used for this visualization contains many "gendered" metrics, for example youth employment percentages for males and females.  The GDI averages the difference between these to get an overall view of whether the country is pro-female or pro-male.
+				For each pair of metrics, we have made judgements on whether higher percentages for females are pro-female (e.g. % of each gender in secondary education), or pro-male (e.g. mortality rates).
+				The calculations do allow for more nuanced weighting, but for this purpose, we have simply used +1 and -1 to represent these pro-female and pro-male metrics.
+				Averaging and Transformation
+				Once the weightings are applied, an average is taken of the resulting differences. <br>This "raw" difference resulted in all but a few countries clustered in a very narrow band around zero.  To highlight the nuanced differences and improve visibility in the dashboard, we applied a transformation designed to spread out values near 0 and reduce the more extreme values.  We then normalized to a range of -100 (completely male-oriented) to +100 (completely female-oriented). The applied transformation (where <em><strong>r</strong></em> is the raw average, and <em><strong>g</strong></em> is the calculated GDI index) is: <em><strong>g = r( 14 - |0.5r| )</strong></em></p>
+				<p class="lead">
+					<button type="button" class="btn1 btn-warning btn-lg btn-sm" onclick="show('mapDashboard');">Show Map</button>
+					<button type="button" class="btn1 btn-warning btn-lg btn-sm" onclick="show('GDIDashboard');">Show GDI Chart</button>
+					<button type="button" class="btn1 btn-warning btn-lg btn-sm" onclick="show('lineDashboard');">Show Line Chart</button>
+				</p>
+			</div>
+			<!-- Team information -->
+			<div class="jumbotron paral paralsec2">
+				<h1 class="display-3">The Team</h1>
+				<div class="row">
+					<div class="col col-sm-4 profile_img" id="Chris">
+						<h2 class="display-3" align="center">Chris Sexton</h2>
+						<img class = "profile_img" src="/assets/SDG/images/Chris.jpg">
+						<p class="lead">
+							Chris runs the data science practice for Conduent Legal and Compliance Services, with a focus on developing text analysis and information extraction solutions. As well as working in the legal space, Chris has experience of developing advanced analytics and reporting systems in the cellular network and customer service industries.
+						</p>
+					</div>
+
+
+					<div class="col col-sm-4 profile_img" id="Yeonjoo">
+						<h2 class="display-3" align="center">Yeonjoo Jung</h2>
+						<img class = "profile_img" src="/assets/SDG/images/Yeonjoo.jpg">
+						<p class="lead">
+							Yeonjoo Jung is Analytics Architect and Development Lead at Koch Business Solutions, where she works with analytics resources globally to design and build end to end advanced analytics solutions. She develops analytics applications in supply chain analytics, operation and production optimization, and HR analytics. She's been working for Koch Industries for the past 19 years.
+						</p>
+					</div>
+					<div class="col col-sm-4 profile_img" id="James">
+						<h2 class="display-3" align="center">James Byrne</h2>
+						<img class = "profile_img" src="/assets/SDG/images/James.jpg">
+						<p class="lead">
+							James leads a global consulting group at TCS focussed on Finance Transformation and CFO Advisory services. His background includes working for Goldman Sachs and for Hyperion - one of the first leaders in multidimensional analysis and visualization software. James lives in New York, NY with his partner and two cats.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="container">
+			<div id="mapDashboard" style="display:none">
+				<div id="topSection" class="topSection">
+							<div class="row">
+								<div class = "btn_head col-xl-12">
+									<button type="button" class="btn btn-dark btn-sm" disabled="disabled">Show Map</button>
+									<button type="button" class="btn btn-dark btn-sm" onclick="show('GDIDashboard');">Show GDI Chart</button>
+									<button type="button" class="btn  btn-dark btn-sm" onclick="show('lineDashboard');">Show Line Chart</button>
+									<button type="button" class="btn btn-dark btn-sm" onclick="show('information');">Information</button>
+								</div>
+						</div>
+					<hr>
+				</div>
+				<div class="row">
+						<p><small>A good place to start is by looking at data for 2015. </small></p>
+						<ul>
+							<li><small>Click on Afghanistan in the Bottom 10 Countries table to zoom in and hover over for more information.</small></li>
+							<li><small>You see that Afghanistan has one of the lowest Gender Disparity Indexes yet received over 20% of GDP as Aid.</small></li>
+							<li><small>Select the Employment Group and the first World Bank Indicator (Contributing family workers, female...)</small></li>
+							<li><small>Afghanistan has a very high value, other countries in Aisa and Africa are simila versus countries in Europe, North America and Oceana </small></li>
+							<li><small>Click on the home button to zoom back out on the map.</small></li>
+						</ul>
+						<p><small>Check out the line chart to compare with other countries in the same region and see how gender indicators are related over time, and take a look at the GDI page for GDI trends</small></p>
+				</div>
+				<div class="row">
+					<div class="dropdown col-xl-1"><strong>Year</strong><select id="yrdropdown"></select> </div>
+					<div class="dropdown col-xl-3"><strong>Country</strong><select id="countryDropdown"></select> </div>
+					<div class="dropdown col-xl-2" id = "indicatorGroupdropdown"><strong>Group</strong> </div>
+					<div class="dropdown col-xl-4" id = "dropdown"><strong>World Bank Indicator</strong> </div>
+				</div>
+				<div class="row">
+					<div class="csvTable col-xl-2" id="table_container" ><h6>Top 10 Countries</h4></div>
+					<div class="csvTable csvTable2 col-xl-2" id="table_container2" ><h6>Bottom 10 Countries</h4></div>
+					<div class="mapclass col-xl-7" id="chartArea"></div>
+				</div>
+			</div>
+
+			<div id="lineDashboard" style="display:none">
+				<div id="topSection" class="topSection">
+								<div class="row">
+								<div class = "btn_head col-xl-12">
+									<button type="button" class="btn btn-dark btn-sm" onclick="show('mapDashboard');">Show Map</button>
+									<button type="button" class="btn btn-dark btn-sm" onclick="show('GDIDashboard');">Show GDI Chart</button>
+									<button type="button" class="btn  btn-dark btn-sm" disabled="disabled">Show Line Chart</button>
+									<button type="button" class="btn btn-dark btn-sm" onclick="show('information');">Information</button>
+								</div>
+							</div>
+					<hr>
+				</div>
+				<div class="row">
+					<p><small>In this section, you can create two line charts for comparison purpose. One way of comparison is looking at trend with two different metrics for same country over time.
+						For example, Afghanistan is one the countries that consistently shows the lowest GDI in the world last 20 years.
+						We can see however that the humanitarian 'Aid as % of GDP' steadily decreased last 10 years compared to the previous 10 years.
+					</small></p>
+					<p><small>Another way of comparison is looking at same or different metrics for two different countries.
+						For example, pick calculated GDI for Afghanistan in the first chart and India for the second chart.
+						We see that GDI of India improved last 10 years compared to the previous 10 years while GDI of Afghanistan doesn't show significant sign of improvement over the years.
+					</small></p>
+					<p><small>The dotted line in both of the charts represents the regional average line of the selected measure of the selected country.
+					</small></p>
+				</div>
+				<div class="row">
+					<div class="dropdown col-xl-3"><strong>Country</strong><select id="countryDropdown1"></select> </div>
+					<div class="dropdown col-xl-2" id = "indicatorGroupdropdown1"><strong>Group</strong> </div>
+					<div class="dropdown col-xl-4" id = "dropdown1"><strong>World Bank Indicator</strong> </div>
+				</div>
+				<div class="row">
+					<div class="lineChartClass lineChart col-xl-12" id="lineChartArea"></div>
+				</div>
+				<div class="row">
+					<div class="dropdown col-xl-3"><strong>Country</strong><select id="countryDropdown2"></select> </div>
+					<div class="dropdown col-xl-2" id = "indicatorGroupdropdown2"><strong>Group</strong> </div>
+					<div class="dropdown col-xl-4" id = "dropdown2"><strong>World Bank Indicator</strong> </div>
+				</div>
+				<div class="row">
+					<div class="lineChartClass lineChart col-xl-12" id="lineChartArea2"></div>
+				</div>
+			</div>
+
+			<div id="GDIDashboard" style="display:none">
+				<div id="topSection" class="topSection">
+							<div class="row">
+								<div class = "btn_head col-xl-12">
+									<button type="button" class="btn btn-dark btn-sm" onclick="show('mapDashboard');">Show Map</button>
+									<button type="button" class="btn btn-dark btn-sm" disabled="disabled">Show GDI Chart</button>
+									<button type="button" class="btn  btn-dark btn-sm" 	onclick="show('lineDashboard');">Show Line Chart</button>
+									<button type="button" class="btn btn-dark btn-sm" onclick="show('information');">Information</button>
+							</div>
+						</div>
+					<hr>
+				</div>
+				<div class="row">
+
+					<p><small>In an attempt to summarize the complexity of gender disparity information, we created the Gender Disparity Index (GDI) from the data provided by the UN and the World Bank. On this chart, you can see each country's GDI over time by hovering over the country name.  Click on the country name to toggle the country's line so you can compare multiple countries. Click on the continent buttons at the top to see all countries in each continent. The GDI ranges from -100 (completely male oriented) to +100 (completely female oriented.</small></p>
+					<p><small><strong>A note of caution:</strong> The GDI is based only on educational, employment, economic and healthcare metrics. It does NOT include social, religious or cultural indicators like gender prejudice, forced marriage, violence against women etc. For example, Female Genital Mutilation (FGM) is common in some tribes in Zimbabwe, but Zimbabwe's 2019 GDI (-7) is virtually identical to that of Switzerland (-6).
+					</small></p>
+				</div>
+				<div class="row">
+					<div class="col col-sm-4" id="gdiResetContainer"></div>
+					<div class="col col-sm-4" id="gdiContinentContainer"></div>
+					<div class="col col-sm-4" id="gdiMessageContainer"></div>
+				<div class="row">
+					<div class="col col-sm-3" id="gdiButtonContainer"></div>
+					<div class="col col-sm-9" id="gdiArea"></div>
+				</div>
+			</div>
+
+			</div>
+		<script src="/assets/SDG/js/SDGWorld.js"></script>
+		<script src="/assets/SDG/js/GDIChart.js"></script>
+
+	</body>
+</html>

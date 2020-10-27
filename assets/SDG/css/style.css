@@ -1,0 +1,449 @@
+.legendThreshold {
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+body, html {
+  height: 100%;
+}
+/* Header Parallax Element Style*/
+.paral {
+min-height: 1000px;
+background-attachment: fixed;
+background-size: cover;
+background-position: 50% 50%;
+}
+
+/* Paragraph for Parallax Section */
+.paral p {
+font-size: 16px;
+color:#f5f5f5;
+text-align: center;
+line-height: 50px;
+}
+
+/* Heading for Parallax Section */
+.paral h1 {
+color: rgba(255, 255, 255, 0.8);
+font-size: 60px;
+text-align: center;
+padding-top: 00px;
+line-height: 100px;
+}
+
+/* Heading for Parallax Section */
+.paral h2 {
+color: rgba(255, 255, 255, 0.8);
+font-size: 40px;
+text-align: center;
+padding-top: 00px;
+line-height: 100px;
+}
+
+/* Image for Parallax Section */
+.paralsec {
+background-image: url("/assets/SDG/images/field.jpg");
+}
+
+.paralsec1 {
+background-image: url("/assets/SDG/images/earth.jpg");
+}
+
+.paralsec2 {
+background-image: url("/assets/SDG/images/globes dark.jpg");
+}
+
+.profile_img {
+    width:  180px;
+    height: 250px;
+    text-align: center;
+    object-fit: cover;
+}
+
+.lead {
+  font-size: 14px;
+}
+
+/* Remove Bottom Margin from Jumbotron */
+.jumbotron{margin-bottom: 0;}
+
+.topSection {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  overflow: hide;
+  background-color: white;
+  margin-left: 30px;
+  /*background-color: #DCDCDC;*/
+}
+
+/* For The whole thing */
+.container {
+  margin-top: 30px;
+  margin-left: 30px;
+  float: left;
+  background-color: white
+  /*margin-right: 20px;*/
+}
+
+/* ForPreable and Controls */
+.preample{
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+.dropdown {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  float: left;
+  font-size: 15px;
+}
+
+/* For Map Dashboard */
+.mapclass {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.home rect {
+  fill: black;
+  opacity: 0.2;
+  rx: 5;  /* Rounded corners */
+  ry: 5;
+}
+
+.home text {
+  fill: black;
+  font-size: 30px;
+  text-anchor: middle;
+}
+
+.hidden {
+      display: none;
+}
+
+table {             /* for the tooltip */
+  margin-bottom: 0;
+}
+
+td, th {
+  padding: 6px 9px;
+}
+
+td {
+  text-align: right;
+}
+
+div.tooltip {
+      color: #222;
+      background: #fff;
+      border-radius: 3px;
+      box-shadow: 0px 0px 2px 0px #a6a6a6;
+      padding: .2em;
+      text-shadow: #f5f5f5 0 1px 0;
+      opacity: 0.9;
+      position: absolute;
+    }
+
+
+/* For Top 10 Bottom 10 Tables */
+
+.csvTable {
+    font: normal 12px/150% Arial, Helvetica, sans-serif;
+    background: #fff;
+    overflow: hidden;
+    float: left;
+    margin-top: 0px
+    border: 1px solid #069;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.csvTable table {
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+}
+
+.csvTable table td, .csvTable table th {
+    padding: 3px 10px;
+}
+
+.csvTable table thead th {
+    background: 0;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699',endColorstr='#00557F');
+    background-color: #006D2C;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 700;
+    border-left: 1px solid #0070A8;
+}
+
+.csvTable table thead th:first-child {
+    border: none;
+}
+
+.csvTable table tbody td {
+    color: #00496B;
+    border-left: 1px solid #E1EEF4;
+    font-size: 12px;
+    border-bottom: 1px solid #E1EEF4;
+    font-weight: 400;
+    cursor:pointer;
+}
+
+.csvTable table tbody td:first-child {
+  border-left: none;
+}
+
+.csvTable table tbody tr:last-child td {
+border-bottom: none;
+}
+
+.csvTable tr:hover td {
+background-color: #069;
+color: white;
+}
+
+
+
+
+
+/* For GDI Chart */
+
+.gdi.chart text {
+  fill: black;
+  font: 10px sans-serif;
+  /*text-anchor: middle;*/
+}
+
+
+.gdi.leftAxis gdi.bottomAxis{
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+.axisLabel {
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+
+/* Unselected Lines */
+.unselectedPath {
+  fill: none;
+  stroke: #ddd;
+  position: absolute;
+  z-index: 50;
+}
+
+.hoverPath {
+  fill: none;
+  stroke: steelblue;
+  position: absolute;
+  z-index: 50;
+}
+
+.glowPath {
+  fill: none;
+  position: absolute;
+  z-index: 100;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+
+
+.selectedPath {
+  fill: none;
+  position: absolute;
+  z-index: 150;
+}
+
+
+.axis line,
+.axis path {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;*/
+  fill: black;
+  font: 10px sans-serif;
+  /*cursor: move;*/
+}
+
+.axis .axisYear {
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;*/
+  stroke: black;
+  fill: black;
+  font: 17px sans-serif;
+  text-anchor: middle;
+}
+
+#gdiButtonContainer {
+  height: 570px;
+  overflow-y: scroll;
+}
+
+#gdiButtons {
+  margin-bottom: 5px;
+}
+
+.gdiButton {
+  /*border: 2px solid steelblue;*/
+  border-radius: 5px;
+  padding: 2px;
+  margin-left: 2px;
+  margin-bottom: -2px;
+  height: 22px;
+  min-width: 20px;
+  font: 10px sans-serif;
+  display: inline-block; /* shrinks button div to fit text */
+}
+
+.gdiButton.gdiSelected {
+  fill: orange;
+}
+
+/* Set the colour of horizontal grid lines across the chartgdiButtons */
+.tick line{
+  stroke: LightGrey;
+}
+
+/* Set styles for the message area */
+#gdiMessageContainer {
+  height: 40px;
+  text-align: right;
+}
+
+.msgCountry {
+  font: 15px sans-serif;
+}
+
+.msgNoData {
+  font: 15px sans-serif;
+  font-style: italic;
+  color: red;
+}
+
+
+/* For Line Chart */
+
+.grid line {
+  stroke: lightgrey;
+  stroke-opacity: 0.7;
+  shape-rendering: crispEdges;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+.line1 {
+    fill: none;
+    stroke: #e41a1c;
+    stroke-width: 3;
+}
+
+.line1dashed{
+    fill: none;
+    stroke: #e41a1c;
+    stroke-width: 1;
+}
+
+.line2 {
+    fill: none;
+    stroke: #377eb8;
+    stroke-width: 3;
+}
+
+.line2dashed {
+    fill: none;
+    stroke: #377eb8;
+    stroke-width: 1;
+}
+
+
+.line3 {
+    fill: none;
+    stroke: #686868;
+    stroke-width: 2;
+   stroke-dasharray: 5,5;   }
+
+
+.dot1 {
+    fill: #e41a1c;
+    stroke: #fff;
+}
+
+.dot2 {
+    fill: #377eb8;
+    stroke: #fff;
+}
+
+.text1 {
+  fill: #e41a1c;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+}
+
+.text2 {
+  fill: #377eb8;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+}
+
+.lineaxis{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.linelabels1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  fill: #e41a1c;
+  color: #e41a1c;
+}
+
+.linelabels2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  fill: #377eb8;
+  color: #377eb8;
+}
+
+.lineChartClass {
+  margin-bottom: 10px;
+}
+
+
+/* controls */
+
+
+.information {
+  margin-top: 0px;
+}
+
+.btn {
+  margin-bottom: 10px;
+  /*width: 150px; */
+  height: 40px;
+  cursor:pointer;
+}
+
+.btn_head {
+  margin-top: 20px;
+  float: left
+}
+
+.btn1 {
+  margin-bottom: 10px;
+  cursor:pointer;
+}
