@@ -21,3 +21,15 @@ html {
         font-size: 17px; // originally 22px
     }
 }
+
+.archive__item-teaser {
+  @include breakpoint($small) {
+    max-height: 400px;
+    max-width: 200px;
+  }
+
+  @include breakpoint($medium) {
+    max-height: 120px;
+    max-height: 240px;
+  }
+}
