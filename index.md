@@ -12,7 +12,7 @@ header:
 
 &nbsp;
 &nbsp;
-![workproduct](/assets/images/icons.png){: .align-center}
+![workproduct](/assets/images/icons2.png){: .align-center}
 &nbsp;
 &nbsp;
 
