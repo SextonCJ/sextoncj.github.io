@@ -1,9 +1,9 @@
 ---
 layout: single
-title: "Online Engagement Classification in the cloud and at the Edge"
-excerpt: "Online Engagement Classification Nvidia Jetson Xavier AWS"
+title: "Data Pipeline with Spark, Docker & Presto"
+excerpt: "Data Pipeline with Spark, Docker & Presto"
 header:
-  teaser: assets/images/jetson.png
+  teaser: assets/images/spark_docker.png
 ---
 
 Project to identify what part of a car is damaged with the goal of speeding up insurance claims.

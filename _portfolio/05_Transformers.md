@@ -3,7 +3,7 @@ layout: single
 title: "BERT & Longformer"
 excerpt: "Legal Document Classification with BERT & Longformer"
 header:
-  teaser: assets/images/huggingface2.png
+  teaser: assets/images/genderDisparity.png
 ---
 
 Project to identify what part of a car is damaged with the goal of speeding up insurance claims.
