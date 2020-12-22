@@ -124,6 +124,9 @@ author:
 # Site Footer
 footer:
   links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:cjsexton@gmail.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url:
@@ -132,7 +135,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/sextoncj"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -144,6 +147,7 @@ footer:
       # url:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/CJSexton"
 
 
 # Reading Files
