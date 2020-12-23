@@ -125,7 +125,7 @@ author:
 footer:
   links:
     - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
+      icon: "fas fa-fw fa-envelope-square fa-4x"
       url: "mailto:cjsexton@gmail.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
@@ -134,7 +134,7 @@ footer:
       icon: "fab fa-fw fa-facebook-square"
       # url:
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+      icon: "fab fa-fw fa-github fa-4x"
       url: "https://github.com/sextoncj"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
@@ -143,10 +143,10 @@ footer:
       icon: "fab fa-fw fa-bitbucket"
       # url:
     - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
+      icon: "fab fa-fw fa-instagram fa-4x"
       # url:
     - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
+      icon: "fab fa-fw fa-linkedin fa-4x"
       url: "https://linkedin.com/in/CJSexton"
 
 
