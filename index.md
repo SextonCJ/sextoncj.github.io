@@ -1,5 +1,5 @@
 ---
-tagline: "experiments with data<br><br><br><br>"
+tagline: "experiments with data<br><br><br>"
 layout: splash
 author_profile: true
 header:
