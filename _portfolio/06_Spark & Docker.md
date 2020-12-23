@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Data Pipeline with Spark, Docker & Presto"
+title: "Spark, Docker & Presto"
 excerpt: "Data Pipeline with Spark, Docker & Presto"
 header:
   teaser: assets/images/spark_docker.jpg

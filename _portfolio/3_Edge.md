@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Online Engagement Classification in the cloud and at the Edge"
+title: "Computer Vision"
 excerpt: "Online Engagement Classification Nvidia Jetson Xavier AWS"
 header:
   teaser: assets/images/jetson.jpg

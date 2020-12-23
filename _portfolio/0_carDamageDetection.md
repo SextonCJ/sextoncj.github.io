@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Car Damage Detection using Mask RCNN"
+title: "Mask RCNN"
 excerpt: "Identifying damage to cars using Mask RCNN Image Segmentation"
 header:
   teaser: assets/images/car-damage-th.jpg
