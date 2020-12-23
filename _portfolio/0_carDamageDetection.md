@@ -3,7 +3,7 @@ layout: single
 title: "Car Damage Detection using Mask RCNN"
 excerpt: "Identifying damage to cars using Mask RCNN Image Segmentation"
 header:
-  teaser: assets/images/car-damage-th.png
+  teaser: assets/images/car-damage-th.jpg
 ---
 
 Project to identify what part of a car is damaged with the goal of speeding up insurance claims.

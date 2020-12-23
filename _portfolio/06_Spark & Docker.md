@@ -3,7 +3,7 @@ layout: single
 title: "Data Pipeline with Spark, Docker & Presto"
 excerpt: "Data Pipeline with Spark, Docker & Presto"
 header:
-  teaser: assets/images/spark_docker.png
+  teaser: assets/images/spark_docker.jpg
 ---
 
 Project to identify what part of a car is damaged with the goal of speeding up insurance claims.
