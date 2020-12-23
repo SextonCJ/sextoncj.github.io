@@ -1,11 +1,10 @@
 ---
-tagline: "experiments with data<br><br><br>"
+tagline: "experiments with data<br><br><br><br>"
 layout: splash
 author_profile: true
 header:
   overlay_image: /assets/images/cows_Fotor2.jpg
   overlay_filter: 0.2
-
 
 ---
 &nbsp;
