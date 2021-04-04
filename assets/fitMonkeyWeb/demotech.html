@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>FitMonkey - Fitness Trainer</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link rel="static/vendor/simple-line-icons/css/simple-line-icons.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="static/device-mockups/device-mockups.min.css">
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/new-age.min.css" rel="stylesheet">
+  <link href="static/css/fitMap.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top" class="demo_body">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger btn-bigger" href="/Portfolio">Portfolio</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" style="padding-left:3em" >
+            <a href="index.html">Home</a>
+          </li>
+          <li class="nav-item" style="padding-left:3em">
+            <a href="tech.html">How It Works</a>
+          </li>
+           <li class="nav-item" style="padding-left:3em">
+            <a href="stats.html">Stats</a>
+          </li>
+          <li class="nav-item" style="padding-left:3em">
+           <a href="demotech.html">Tech Demo</a>
+         </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="features pg_feature">
+    <div class="row w-50 mx-auto">
+      <h1>Demo</h1>
+    </div>
+    <div class="row w-50 mx-auto">
+            <button data-video-url="static/video/pushup_demo.m4v" class="highlight-hover select ex_button pushup" ex-name="pushup"></button>
+            <button data-video-url="static/video/squat_demo.m4v" class="highlight-hover select ex_button squat" ex-name="squat"></button>
+            <button data-video-url="static/video/pullup_demo.m4v" class="highlight-hover select ex_button pullup" ex-name="pullup"></button>
+            <a href="index.html" class="btn btn-dark btn-lg ex_button" role="button" aria-pressed="true"><i class="fa fa-home"></i></a>
+            <a href="stats.html" class="btn btn-dark btn-lg  ex_button" role="button" aria-pressed="true"><i class="fa fa-chart-bar"></i></a>
+    </div>
+  </section>
+
+  <div class="row w-50 mx-auto">
+      <div class="device-container device-mockup iphone_x landscape white">
+          <div class="device">
+            <div class="screen">
+              <video id="player" class="img-fluid"></video>
+            </div>
+          </div>
+      </div>
+  </div>
+
+  <br><br><br>
+
+  <footer>
+    <div class="container">
+      <p>&copy; Fitmap 2021. All Rights Reserved.</p>
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <a href="#">Privacy</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#">Terms</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#">FAQ</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <script>
+    // Function to make button hover over color stick
+    var yourbuttons = document.getElementsByClassName('highlight-hover');
+    for (var i = yourbuttons.length - 1; i >= 0; i--) {
+      var currentbtn;
+      yourbuttons[i].onclick=function(){
+        if(currentbtn){
+          currentbtn.classList.remove("highlight");
+        }
+        this.classList.add("highlight");
+        currentbtn=this;
+      }
+    };
+
+    // function to select which video to run based on button press
+    function swapVideo() {
+       player.src = this.getAttribute("data-video-url");
+       player.load();
+       player.play();
+    }
+
+    var videoPlayButtons = document.querySelectorAll("button"),
+       player = document.getElementById("player");
+
+    for (var i=0; i<videoPlayButtons.length; i++){
+       videoPlayButtons[i].addEventListener('click', swapVideo);
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>FitMonkey - At Home Fitness Trainer</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="static/vendor/simple-line-icons/css/simple-line-icons.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="static/device-mockups/device-mockups.min.css">
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/new-age.min.css" rel="stylesheet">
+  <link href="static/css/fitMap.css" rel="stylesheet">
+
+  <title>howItWorks</title>
+
+  <style>
+    body {
+      background-color: #f8f8ff;
+    }
+  </style>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger btn-bigger" href="/Portfolio">Portfolio</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" style="padding-left:3em" >
+            <a href="index.html">Home</a>
+          </li>
+          <li class="nav-item" style="padding-left:3em">
+            <a href="tech.html">How It Works</a>
+          </li>
+           <li class="nav-item" style="padding-left:3em">
+            <a href="stats.html">Stats</a>
+          </li>
+          <li class="nav-item" style="padding-left:3em">
+           <a href="demotech.html">Tech Demo</a>
+         </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <section class="features full-height" id="workouts-welcome">
+    <div class="container">
+      <div class="row">
+        <h3>All Workouts Welcome</h3>
+      </div>
+        <div class="row">FitMonkey uses computer vision to accurately count repetitions and provide feedback on exercise form.</div>
+        <br>
+        <ol>
+          <li>Modular Code means new exercises can be trained in only [insert time here].</li>
+          <li>Add routines as your gym expands.</li>
+          <li>New workouts are always being added.</li>
+        </ol>
+        <br>
+        <div class="row">Our Proof of concept demo has been trained on pushups and [workout 2] with the following performance results</div>
+        <br>
+        <div class="row">
+          <div class="col-lg-7 my-4">
+            <table style="width:100%">
+              <tr>
+                <th rowspan="2">PUSHUPS</th>
+                <th colspan="2">Test</th>
+              </tr>
+              <tr>
+                <td>F1</td>
+                <td>Accuracy</td>
+              </tr>
+              <tr>
+                <td>Pushup Detector</td>
+                <td>0.78</td>
+                <td>0.82</td>
+              </tr>
+              <tr>
+                <td>Bad Back Form</td>
+                <td>0.91</td>
+                <td>0.91</td>
+              </tr>
+                <td>Flared Elbows Form</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>Head Down Form</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+          </table>
+          <br>
+          <table style="width:100%">
+            <tr>
+              <th rowspan="2">Exercise 2</th>
+              <th colspan="2">Test</th>
+            </tr>
+            <tr>
+              <td>F1</td>
+              <td>Accuracy</td>
+            </tr>
+            <tr>
+              <td>Exercise Detector</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>Bad  Form</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-lg-5 my-auto">
+          <img src="static/img/weight_room_future.jpg" class="img-fluid" alt="">
+        </div>
+      </div>
+      <div class="row">
+        <a class="fas fa-angle-double-right fa-lg js-scroll-trigger" href="#pose-estimation"></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features full-height" id="pose-estimation">
+    <div class=" container">
+      <div class="row">
+        <h3>State of the Art Keypoint Tracking with Human2D Pose Estimation</h3>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 my-auto">
+          <img src="static/img/pose_img.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-6 my-4 mx-auto">
+          <div class="row">We use Human Pose Estimation to generate input into our form trackers.</div>
+          <div class="row">Human Pose Estimation localizes and captures human body parts, such as shoulders, elbows and ankles from the input video.</div>
+          <br>
+          <ul>
+            <li>First we identify the confidence maps to identify body parts (fig 1a)</li>
+            <li>Then we identify the affinity fields (fig 1b) which represent the degree of association between the body parts</li>
+            <li>The confidence maps and affinity fields are used to infer 2d keypoints (fig 1c)</li>
+            <li>These keyopints map to CoCo bodyparts (fig 1d)</li>
+            <li>An aditional step is to calculate the angles between body part pairs, such as wrist and elbow</li>
+          </ul>
+          <br>
+          <div class="row">The keypoints, and angle coordinates are used to train exercise detection and posture models</div>
+        </div>
+      </div>
+      <div class="row">
+        <a class="fas fa-angle-double-right fa-lg js-scroll-trigger" href="#optical-flow"></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features full-height" id="optical-flow">
+    <div class="container">
+      <div class="row">
+        <h3>Counting Reps with Optical Flow</h3>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 my-4">
+          <div class="row">We use Optical flow to count reps.</div>
+
+          <div class="row">Optical flow is the pattern of apparent motion of image objects between two consecutive frames in a sequence (e.g. frames in a video).
+            It shows the movement of points fetween frames using a 2D vector field, where each vector represents the displacement (difference) of frames.
+          </div>
+          <br>
+          <div class="row">
+            We use Open CV's implementation of Dense Optical Flow using Gunner Farneback’s algorithm to track the movement of the user performing the exercise.
+            The algorithm calculates the optical flow for every pixel in the image.
+          </div>
+          <br>
+          <div class="row">
+            Because anarobic exercises are Home consistent and repetitive motion, we can track the change in direction of movement as an example of a repetition
+            And because optical flow tracks movement - we can use the same algorithm for all exercises, negating the need to train multiple models.
+          </div>
+        </div>
+
+        <div class="col-lg-6 my-auto">
+          <!--video width = "100%" class = "stock_video" autoplay muted loop-->
+          <caption>Fig.2 - Optical Flow field</caption>
+          <video width = "100%" class = "stock_video" muted controls>
+            <source src="static/img/OpticalFlowPushUp.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="row">
+        <a class="fas fa-angle-double-right fa-lg js-scroll-trigger" href="#edge"></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features full-height" id="edge">
+    <div class="container">
+      <div class="row">
+        <h3>Optimized for Edge, Works on a desktop</h3>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 my-4">
+          <div class="row">Our models have been trained to run on edge devices, which can be deployed throughout the gym</div>
+          <br>
+          <ul>
+            <li>Each station can have it's own inexpensive device</li>
+            <li>Can scale as your gym grows</li>
+            <li>Try out on new equipment</li>
+            <li>No expensive hosting costs, all the compute is done locally</li>
+          </ul>
+          <div class="row">FitMonkey will also run on a standard desktop computer - see table right for the performance of a 21 second pushup routine</div>
+        </div>
+        <div class="col-lg-6 my-auto">
+          <table style="width:100%">
+            <tr>
+              <th rowspan="2"></th>
+              <th colspan="2">APPLICATION RUN TIME (secs)</th>
+            <tr>
+              <th>EDGE DEVICE - ARM GPU </th>
+              <th>DESKTOP - INTEL CPU</th>
+            </tr>
+            <tr>
+              <td>full pipeline</td>
+              <td>16.43</td>
+              <td>46.91</td>
+            </tr>
+            <tr>
+              <td>reading</td>
+              <td>17.01</td>
+              <td>5.93</td>
+            </tr>
+            <tr>
+              <td>get pose feature </td>
+              <td>5.97</td>
+              <td>31.22</td>
+            </tr>
+            <tr>
+              <td>pre-process</td>
+              <td>0.54</td>
+              <td>0.14</td>
+            </tr>
+            <tr>
+              <td>optical flow</td>
+              <td>5.50</td>
+              <td>14.65</td>
+            </tr>
+            <tr>
+              <td>push up prediction</td>
+              <td>2.86</td>
+              <td>0.42</td>
+            </tr>
+            <tr>
+              <td>post-process</td>
+              <td>0.12</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td>back prediction</td>
+              <td>0.03</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td>Optical flow FPS</td>
+              <td>228.09</td>
+              <td>85.62</td>
+            </tr>
+            <tr>
+              <td>Full pipeline FPS</td>
+              <td>76.38</td>
+              <td>26.75</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <a class="fas fa-angle-double-right fa-lg js-scroll-trigger" href="#home-workout"></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features full-height" id="home-workout">
+    <div class="container">
+      <div class="row">
+        <h3>Works at home, when you can't get to the gym</h3>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 my-auto">
+          <img src="static/img/atHome.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-9 my-auto">
+          Fitmap can work for home routines just as well as at the gym. By simply using the cell phone to capture the workout video in real time, Fitmap will count your reps and tell you when form needs improving
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <a class="fas fa-angle-double-right fa-lg js-scroll-trigger" href="#page-top"></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; Fitmap 2021. All Rights Reserved.</p>
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <a href="#">Privacy</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#">Terms</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#">FAQ</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="static/js/new-age.min.js"></script>
+
+</body>
+
+</html>

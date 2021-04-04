@@ -1,0 +1,78 @@
+.demo_body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 100px;
+  color: white;
+  background: url("../img/bg-pattern.png"), #7b4397;
+  background: url("../img/bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430);
+  font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
+}
+
+table, th, td {
+  border: 1px solid #808080;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: center;
+  font-size:75%;
+}
+caption {
+  font-size:50%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.fa-home {
+  color: white;
+}
+
+.fa-chart-bar {
+  color: white;
+}
+
+.ex_button{
+  display: inline-block;
+  text-decoration: none;
+  background-color: #353a3f;
+  width: 75px;
+  height: 75px;
+  line-height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  transition: .1s;
+  background-size: cover;
+  margin-top: 20px;
+  margin-left: 50px;
+  border-style: none;
+  font-size: 36px;
+}
+
+.ex_button:hover{
+background-color: #585858;
+cursor: pointer;
+}
+
+.highlight {
+  background-color: #585858;
+  cursor: pointer;
+}
+
+.pushup {background-image: url("/assets/fitMonkeyWeb/static/img/noun_Push-up_1504883.png");}
+.pullup {background-image: url("/assets/fitMonkeyWeb/static/img/noun_pull up_83591.png");}
+.squat {background-image: url("/assets/fitMonkeyWeb/static/img/noun_squatting_77784.png");}
+
+.pg_feature {padding-bottom: 25px;}
+
+.y-axis{
+  font: 50px;
+}
+
+.x-axis{
+  font: 50px;
+}
