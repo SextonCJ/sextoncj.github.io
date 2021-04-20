@@ -9,11 +9,13 @@
   font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
 }
 
-table, th, td {
+table {
+  width: 100%;
+}
+
+th, td {
   border: 1px solid #808080;
   border-collapse: collapse;
-}
-th, td {
   padding: 5px;
   text-align: center;
   font-size:75%;

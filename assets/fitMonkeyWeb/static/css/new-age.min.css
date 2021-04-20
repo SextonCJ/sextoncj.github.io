@@ -415,6 +415,7 @@ footer ul li a:hover {
 .bg-primary {
 	background: #fdcc52;
 	background: linear-gradient(#fdcc52, #fdc539)
+		color: #fff;
 }
 
 .text-primary {
@@ -445,7 +446,7 @@ footer ul li a:hover {
 	border-radius: 300px;
 	font-family: Lato, Helvetica, Arial, sans-serif;
 	letter-spacing: 2px;
-	text-transform: uppercase
+	text-transform: uppercase;
 }
 
 .btn-xl {

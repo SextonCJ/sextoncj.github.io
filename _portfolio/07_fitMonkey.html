@@ -1,7 +1,7 @@
 ---
 layout: project
-title: "ftMonkey"
-excerpt: "Phone App to identify exercise and count reps using Computer Vision"
+title: "Mobile / Edge App"
+excerpt: "Phone App to identify exercise, check form and count reps using Computer Vision"
 header:
   image: /assets/images/fitMonkey.png
   teaser: /assets/images/fitMonkey.png
@@ -18,7 +18,7 @@ header:
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>FitMonkey - Fitness Trainer</title>
+  <title>FitMap - Fitness Trainer</title>
 
   <!-- Bootstrap core CSS -->
   <link href="/assets/fitMonkeyWeb/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -37,59 +37,28 @@ header:
   <link href="/assets/fitMonkeyWeb/static/css/new-age.min.css" rel="stylesheet">
   <link href="/assets/fitMonkeyWeb/static/css/fitMap.css" rel="stylesheet">
 
+  <style>
+    .fp_button {
+      margin-right: 20px;
+      color: white !important;
+    }
+    .fp_button1 {
+      margin-right: 20px;
+    }
+  </style>
+
 </head>
 
 <body id="page-top">
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger btn-bigger" href="/Portfolio">Portfolio</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item" style="padding-left:3em" >
-            <a href="index.html">Home</a>
-          </li>
-          <li class="nav-item" style="padding-left:3em">
-            <a href="/assets/fitMonkeyWeb/tech.html">How It Works</a>
-          </li>
-           <li class="nav-item" style="padding-left:3em">
-            <a href="/assets/fitMonkeyWeb/stats.html">Stats</a>
-          </li>
-          <li class="nav-item" style="padding-left:3em">
-           <a href="/assets/fitMonkeyWeb/demotech.html">Tech Demo</a>
-         </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
   <header class="masthead">
     <div class="container h-100">
       <div class="row h-100">
         <div class="col-lg-7 my-auto">
           <div class="header-content mx-auto">
-            <h1 class="mb-5">FitMonkey is your gym's new Fitness Coach. Partner with us to get to give your customers the ultimate Fitness Training</h1>
-            <a href="demotech.html" class="btn btn-outline btn-xl js-scroll-trigger">Demo</a>
-          </div>
-        </div>
-        <div class="col-lg-5 my-auto">
-          <div class="device-container">
-            <div class="device-mockup iphone_x landscape white">
-              <div class="device">
-                <div class="screen">
-                  <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                  <!-- <img src="img/demo-screen-1.jpg" class="img-fluid" alt=""> -->
-                  <video width = "100%" class = "stock_video" autoplay muted loop>
-                    <source src="/assets/fitMonkeyWeb/static/img/youtube_1.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </div>
-            </div>
+            <h1 class="mb-5">FitMap is your gym's new Fitness Coach. Partner with us to get to give your customers the ultimate Fitness Training</h1>
+            <a href="/assets/fitMonkeyWeb/demotech.html" class="btn btn-outline fp_button">Demo</a>
+            <a href="/assets/fitMonkeyWeb/tech.html" class="btn btn-outline fp_button">How It Works</a>
           </div>
         </div>
       </div>
@@ -98,50 +67,37 @@ header:
 
   <section class="features" id="features">
     <div class="container">
-      <div class="section-heading text-center">
-        <h2>Workout with your new Virtual Fitness Trainer</h2>
-        <hr>
-      </div>
+
 
       <div class="row">
-        <div class="col-lg-4 my-auto">
 
-
-                  <img src="/assets/fitMonkeyWeb/static/img/phone_workout.jpg" class="img-fluid" alt="">
-
-                <div class="button">
-                </div>
-
-        </div>
-        <div class="col-lg-8 my-auto">
+        <div class="col-lg-12 my-auto">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-lg-6">
+              <div class="col-lg-3">
                 <div class="feature-item">
-                  <i class="icon-camrecorder text-primary"></i>
+                  <i class="fas fa-video"></i>
                   <h3>Count Reps</h3>
                   <p class="text-muted">FitMonkey uses Computer Vision to classify your exercises and count your reps accurately</p>
                 </div>
               </div>
-              <div class="col-lg-6">
+              <div class="col-lg-3">
                 <div class="feature-item">
-                  <i class="icon-info text-primary"></i>
+                  <i class="fas fa-info-circle"></i>
                   <h3>Form Feedback</h3>
                   <p class="text-muted">Our Machine Learning models identify where your form could use some improvement</p>
                 </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-6">
+              <div class="col-lg-3">
                 <div class="feature-item">
-                  <i class="icon-chart text-primary"></i>
+                  <i class="fas fa-chart-bar"></i>
                   <h3>Track Progress</h3>
                   <p class="text-muted">Document your progress and improvements over time without needing to manually track it</p>
                 </div>
               </div>
-              <div class="col-lg-6">
+              <div class="col-lg-3">
                 <div class="feature-item">
-                  <i class="icon-screen-smartphone text-primary"></i>
+                  <i class="fas fa-mobile"></i>
                   <h3>Multiple Exercises</h3>
                   <p class="text-muted">Use FitMonkey for exercises from push-ups and sit-ups to squats and deadlifts</p>
                 </div>
@@ -150,13 +106,11 @@ header:
           </div>
         </div>
       </div>
+
+        <a href="/assets/fitMonkeyWeb/demotech.html" class="btn btn-outline fp_button1">Demo</a>
+        <a href="/assets/fitMonkeyWeb/tech.html" class="btn btn-outline fp_button1">How It Works</a>
     </div>
   </section>
-
-
-
-
-
 
 
 
@@ -187,6 +141,8 @@ header:
   <!-- Plugin JavaScript -->
   <script src="/assets/fitMonkeyWeb/static/vendor/jquery-easing/jquery.easing.min.js"></script>
 
+  <!-- Custom scripts for this template -->
+  <script src="/assets/fitMonkeyWeb/static/js/new-age.min.js"></script>
 
 </body>
 
