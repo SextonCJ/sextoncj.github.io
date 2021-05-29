@@ -11,7 +11,7 @@ header:
 #### Chris Sexton, Louis Li, Carver Sorenson | November, 2019
 
 <div style="text-align: justify">
-This project looks at examining cirme rate in North Carolina using statistical analysis with R.    
+This project looks at examining crime rate in North Carolina using statistical analysis with R.    
 <br>
 <br>
 Crime Rate in North Carolina is a potential topic for a political campaign. Candidates need to have an

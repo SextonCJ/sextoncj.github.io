@@ -1,0 +1,143 @@
+---
+layout: single
+title: "Pose Estimation Fitness App"
+excerpt: "Phone App to identify exercise, check form and count reps using Open Pose on ARM architecture"
+header:
+  teaser: /assets/images/fitMonkey.png
+---
+
+<style>
+  table {
+    width: 100%;
+  }
+
+  th, td {
+    border: 1px solid #808080;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+    font-size:75%;
+  }
+</style>
+
+
+FitMonkey is a product designed to track exercise performance using computer vision. This edge (Nvidia Jetston) enabled app counts repetitions and monitors for good/bad form using models trained on pose estimation and optical flow.
+
+Check out the website <a href="/assets/fitMonkeyWeb/fitmonkey.html">fitMonkey</a>
+
+<h4>Performance</h4>
+
+  The proof of concept demo has been trained on pushups, pullups and squats, with the following performance results
+  <br><br>
+
+    <table>
+      <tr>
+        <th rowspan="2">Pushups</th>
+        <th colspan="2">Validation</th>
+        <th colspan="2">Test</th>
+      </tr>
+      <tr>
+        <td>F1</td>
+        <td>Accuracy</td>
+        <td>F1</td>
+        <td>Accuracy</td>
+      </tr>
+      <tr>
+        <td>Pushup Detector</td>
+        <td>0.95</td>
+        <td>0.95</td>
+        <td>0.89</td>
+        <td>0.81</td>
+      </tr>
+      <tr>
+        <td>Bad Back Form</td>
+        <td>0.97</td>
+        <td>0.97</td>
+        <td>0.79</td>
+        <td>0.76</td>
+      </tr>
+    </table>
+    <br>
+    <table style="width:100%">
+    <tr>
+      <th rowspan="2">Squats</th>
+      <th colspan="2">Validation</th>
+      <th colspan="2">Test</th>
+    </tr>
+    <tr>
+      <td>F1</td>
+      <td>Accuracy</td>
+      <td>F1</td>
+      <td>Accuracy</td>
+    </tr>
+    <tr>
+      <td>Squats Detector</td>
+      <td>0.98</td>
+      <td>0.98</td>
+      <td>0.93</td>
+      <td>0.93</td>
+    </tr>
+    <tr>
+      <td>Bad  Form</td>
+      <td>0.99</td>
+      <td>0.99</td>
+      <td>0.81</td>
+      <td>0.75</td>
+    </tr>
+    </table>
+    <br>
+    <table>
+    <tr>
+      <th rowspan="2">Pullups</th>
+      <th colspan="2">Validation</th>
+      <th colspan="2">Test</th>
+    </tr>
+    <tr>
+      <td>F1</td>
+      <td>Accuracy</td>
+      <td>F1</td>
+      <td>Accuracy</td>
+    </tr>
+    <tr>
+      <td>Pullup Detector</td>
+      <td>0.95</td>
+      <td>0.95</td>
+      <td>0.97</td>
+      <td>0.99</td>
+    </tr>
+  </table>
+
+
+<h4>Keypoint Tracking with Human2D Pose Estimation</h4>
+
+Human Pose Estimation is used to generate input into the form tracking models.
+Human Pose Estimation localizes and captures human body parts, such as shoulders, elbows and ankles from the input video.
+<br>
+<ul>
+  <li>First we identify the confidence maps to identify body parts (fig 1a)</li>
+  <li>Then we identify the affinity fields (fig 1b) which represent the degree of association between the body parts</li>
+  <li>The confidence maps and affinity fields are used to infer 2d keypoints (fig 1c)</li>
+  <li>These keyopints map to CoCo bodyparts (fig 1d)</li>
+  <li>An aditional step is to calculate the angles between body part pairs, such as wrist and elbow</li>
+</ul>
+The keypoints, and angle coordinates are used to train exercise detection and posture models
+<br><br>
+<img src="/assets/fitMonkeyWeb/static/img/pose_img.png">
+<br>
+
+<h4>Counting Reps with Optical Flow</h4>
+
+Optical flow is the pattern of apparent motion of image objects between two consecutive frames in a sequence (e.g. frames in a video).
+It shows the movement of points fetween frames using a 2D vector field, where each vector represents the displacement (difference) of frames.
+<br><br>
+We use Open CV's implementation of Dense Optical Flow using Gunner Farneback’s algorithm to track the movement of the user performing the exercise.
+The algorithm calculates the optical flow for every pixel in the image.
+<br><br>
+Because anarobic exercises are Home consistent and repetitive motion, we can track the change in direction of movement as an example of a repetition
+And because optical flow tracks movement - we can use the same algorithm for all exercises, negating the need to train multiple models.
+<br><br>
+<caption>Fig.2 - Optical Flow field</caption>
+<br>
+<video width = "70%" muted controls>
+  <source src="/assets/fitMonkeyWeb/static/img/OpticalFlowPushUp.mp4" type="video/mp4">
+</video>

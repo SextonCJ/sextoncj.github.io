@@ -42,15 +42,15 @@ line-height: 100px;
 
 /* Image for Parallax Section */
 .paralsec {
-background-image: url("/assets/SDG/images/field.jpg");
+background-image: url("/assets/SDG/images/field1.jpg");
 }
 
 .paralsec1 {
-background-image: url("/assets/SDG/images/earth.jpg");
+background-image: url("/assets/SDG/images/earth1.jpg");
 }
 
 .paralsec2 {
-background-image: url("/assets/SDG/images/globes dark.jpg");
+background-image: url("/assets/SDG/images/globes dark1.jpg");
 }
 
 .profile_img {

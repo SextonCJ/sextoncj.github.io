@@ -20,10 +20,10 @@ header:
 ---
 
 <div style="text-align: center">
-  I am a Data Science and Analytics specialist with experience building teams and getting the most out of data. I have a Masters degree in Information and Data Science from UC. Berkeley. For my day job I work on creating deep learning text analytics products in the compliance and legal profession.
+  I am a Data Science and Analytics specialist with experience building teams and getting the most out of data. I have a Masters degree in Information and Data Science from UC. Berkeley. For my day job I work on creating text analytics products in the compliance and legal profession.
   <br>
   <br>
-  Please feel free to connect or just check out some of the fun projects I have been working on, all my is code available on <a href="https://github.com/SextonCJ">GitHub</a>
+  Please feel free to connect or just check out some of the projects I have been working on, all my is code available on <a href="https://github.com/SextonCJ">GitHub</a>
 </div>
 
 &nbsp;

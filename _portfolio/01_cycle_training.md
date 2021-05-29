@@ -3,13 +3,16 @@ layout: single
 title: "D3 Linked Bar Charts"
 excerpt: "Project to show race readiness using d3 and garmin power meter metrics"
 header:
-  teaser: assets/images/cycling-chart-th.jpg
+  teaser: assets/images/cycling-chart-th.png
 ---
 
-# Phone App
+![Cycle Metrics Viz](/assets/images/cycling-chart.png)
 
-## Overview
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+In this I project I use D3.js to create a linked chart visualization to examine bike training output leading up to a race. I specifically wanted to focus on choosing contrasting colors to highlight the current selection as well as shades of grey to represent intensity.
 
-Check out the website <a href="/assets/cycle_training/cycle_training.html">Visualization</a>
+The charts include some neat D3 features, such as hover over, overlaying line charts and linked charts and annotations.
+
+Check out the interactive chart here: <a href="/assets/cycle_training/cycle_training.html">Visualization</a>
+
+D3 code is available on <a href="https://github.com/SextonCJ/cycleMetricsD3">github</a>

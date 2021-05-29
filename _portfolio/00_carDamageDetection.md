@@ -6,13 +6,13 @@ header:
   teaser: assets/images/car-damage-th.jpg
 ---
 
-Project to identify what part of a car is damaged with the goal of speeding up insurance claims.
+This is a project to use computer vision to identify what part of a car is damaged with the goal of speeding up insurance claims.
 
 ## Setup
 
-In this project I use Mask RCNN framework as provided by [Matterport](https://github.com/matterport/Mask_RCNN) to train and predict for car body damage based on images of damaged cars.
+I use Mask-RCNN framework as provided by [Matterport](https://github.com/matterport/Mask_RCNN) to train and predict for car body damage based on labeled images of damaged cars.
 
-Data is provided by [Kaggle](https://www.kaggle.com/anujms/car-damage-detection#0001.JPEG)
+The original damagedaded car data is provided by [Kaggle](https://www.kaggle.com/anujms/car-damage-detection#0001.JPEG)
 
 Each train and validation image has been annotated using [VGG Annotator](http://www.robots.ox.ac.uk/~vgg/software/via/via-1.0.6.html) to identify the region of interest (damage)
 
