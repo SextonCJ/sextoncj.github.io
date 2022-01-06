@@ -11,7 +11,7 @@ Detecting Student Engagement through live Video Stream
 
 Detecting student engagement from video is a difficult task. This paper describes in detail the methods and processes to train deep learning models to predict engagement with CNNs and RNNs using cloud infrastructure, and the practical deployment of these models to an NVIDIA Jetson device. Although the models tend to overfit to training data, the overall system is designed in such a way that as alternative models are developed they can be integrated. Some attempts are made for code reuse, usability and the centralized storage of data and results.
 
-Download the Report <a href="/assets/docs/Ledge_whitepaper.pdf" download>Download PDF</a>
+Download the Report <a href="/assets/docs/edge_whitepaper.pdf" download>Download PDF</a>
 
 
 ## Introduction

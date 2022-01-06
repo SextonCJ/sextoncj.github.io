@@ -18,4 +18,4 @@ header:
 </div>
 
 
-Download the Report <a href="/assets/docs/  genderDisparityDeepLearning.pdf" download>Download PDF</a>
+Download the Report <a href="/assets/docs/genderDisparityDeepLearning.pdf" download>Download PDF</a>
